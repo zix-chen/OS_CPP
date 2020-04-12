@@ -3,6 +3,47 @@
 
 using namespace std;
 
+/*
+ Banker’s Algorithm
+ First line is an integer r, which is the number of resource types.
+ The second line will be r integers, which are the maximum quantity of each resource.
+  Then will be following a list of commands. The commands are in three form:
+ New process registering, such as “1678 new 6 5 0 7”, means
+ process 1678 is a new process, whose maximum need of each resource is 6 5 0 7 (assume r is 4)
+
+ Resource requesting, such as “233 request 0 4 5 3”, means
+ process 233 is an old process, it request more resource, the need of each resource is 0 4 5 3.
+
+ Process termination, such as “233 terminate”, means
+ process 233 terminate and return all resources it holding.
+
+Output:
+For each command, output “OK” or “NOT OK” to determine if the command can execute. If OK, execute the command.
+
+ input:
+3
+4 2 3
+233 new 1 2 3
+888 new 4 3 3
+777 new 4 2 3
+233 request 1 2 0
+777 request 0 0 4
+777 request 0 0 3
+233 terminate
+
+output:
+
+
+OK
+NOT OK
+OK
+OK
+NOT OK
+NOT OK
+OK
+
+ */
+
 template<class T>
 class node {
 public:
